@@ -1,7 +1,7 @@
 {
   "name": "roomsjs",
-  "version": "0.0.25",
-  "description": "Real Time Communication and Collaboration",
+  "version": "0.0.26",
+  "description": "JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end",
   "main": "index.js",
   "scripts": {
     "test": "listenToRoomEvents"
