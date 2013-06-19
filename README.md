@@ -1,4 +1,4 @@
-# JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end 
+# Roomsjs - JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end
 
 A Node.JS module, provides an object oriented wrapper for socketio for creating rooms and streaming data between users, streaming data from a database and even 3rd party services.
 `roomsjs` based on Socket.IO, `roomsdb` and `roomsjs-fronend` combine together provides a powerful light-weight backend/front-end libraries built to stream live data, stream data from a database and even stream 3rd party APIs.
@@ -24,10 +24,10 @@ It has features such as:
       $ npm install roomsjs
       $ npm install rooms.db
 
-Download the front-end code from:
+Download the front-end min file:
+[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/libs/socketcontroller.min.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.min.js)
 
-[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/enum/messagetype.js.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/enum/messagetype.js)
-[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.js)
+Example of front-end implementation of `socketcontroller`:
 [https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js)
 
 Front-end dependencies: `jquery.js`, `socket.io.js`
@@ -52,14 +52,20 @@ var express     = require('express'),
 
 app.use(express.static(__dirname + '/public'));
 
-server.listen(port, function() {
+server.listen(port, function () {
     console.log('Listening on http://' + os.hostname() + ':' + port);
 });
 
+// comment out if no db is needed and sets dbconnector to null
 dbconnector.connectToDatabase('mysql', 'localhost', 'root', '');
 db_methods.setMethods(dbconnector);
 
-rooms = new rooms({ server : server, isdebug : true, socketio : null, dbconnector : dbconnector });
+rooms = new rooms({
+    server : server,
+    isdebug : true,
+    socketio : null,
+    dbconnector : dbconnector /* or null if no db needed */
+});
 </code></pre>
 
 Front-end example of getting the number of visitors:
@@ -73,8 +79,7 @@ Front-end example of getting the number of visitors:
     &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/enums/messagetype.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/socketcontroller.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/js/autostartcontroller.js"&#62;&#60;/script&#62;
 &#60;body&#62;
     &#60;button id="getResultsButton"&#62;Get results&#60;/button&#62;
@@ -94,8 +99,7 @@ Example of streaming a pod consists of live camera feeds and text comment feed b
     &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/enums/messagetype.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/socketcontroller.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/js/controller.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/js/model/vo/clientvo.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/js/libs/swfobject.js"&#62;&#60;/script&#62;
