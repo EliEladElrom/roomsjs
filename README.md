@@ -1,4 +1,4 @@
-# Roomsjs - JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end
+# JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end 
 
 A Node.JS module, provides an object oriented wrapper for socketio for creating rooms and streaming data between users, streaming data from a database and even 3rd party services.
 `roomsjs` based on Socket.IO, `roomsdb` and `roomsjs-fronend` combine together provides a powerful light-weight backend/front-end libraries built to stream live data, stream data from a database and even stream 3rd party APIs.
@@ -46,8 +46,7 @@ var express     = require('express'),
     http        = require('http'),
     server      = http.createServer(app),
     rooms       = require('roomsjs'),
-    dbconnector = require('rooms.db'),
-    db_methods  = require('./roomsdb_sample/dbconnector_methods.js'),
+    roomdb = require('rooms.db'),
     port        = (process.env.PORT || 8081);
 
 app.use(express.static(__dirname + '/public'));
@@ -56,15 +55,18 @@ server.listen(port, function () {
     console.log('Listening on http://' + os.hostname() + ':' + port);
 });
 
-// comment out if no db is needed and sets dbconnector to null
-dbconnector.connectToDatabase('mysql', 'localhost', 'root', '');
-db_methods.setMethods(dbconnector);
+// services
+roomdb.setServices('roomsdb_services_sample/');
 
+// connect database
+roomdb.connectToDatabase('mysql', 'localhost', 'root', '');
+
+// set rooms
 rooms = new rooms({
     server : server,
     isdebug : true,
     socketio : null,
-    dbconnector : dbconnector /* or null if no db needed */
+    roomdb : roomdb /* or null if no db needed */
 });
 </code></pre>
 

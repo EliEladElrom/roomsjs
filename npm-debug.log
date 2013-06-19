@@ -21,120 +21,122 @@
 9 silly lockFile 3a52ce78- .
 10 verbose lock . /Users/elad/.npm/3a52ce78-.lock
 11 verbose read json package.json
-12 verbose tar pack [ '/var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz',
+12 verbose tar pack [ '/var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz',
 12 verbose tar pack   '.' ]
-13 verbose tarball /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
+13 verbose tarball /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
 14 verbose folder .
-15 info prepublish roomsjs@0.0.27
+15 info prepublish roomsjs@0.0.21
 16 silly lockFile 3a52ce78- .
 17 verbose lock . /Users/elad/.npm/3a52ce78-.lock
-18 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-19 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz /Users/elad/.npm/90a3a2a9-40075-0-4377688451204449-tmp-tgz.lock
+18 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+19 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz /Users/elad/.npm/83fc4267-82713-0-8493298778776079-tmp-tgz.lock
 20 silly lockFile 3a52ce78- .
 21 silly lockFile 3a52ce78- .
-22 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-23 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-24 verbose tar unpack /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-25 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-26 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package /Users/elad/.npm/4cb43e3c-40075-0-4377688451204449-package.lock
-27 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-28 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz /Users/elad/.npm/90a3a2a9-40075-0-4377688451204449-tmp-tgz.lock
+22 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+23 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+24 verbose tar unpack /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+25 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+26 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package /Users/elad/.npm/6ebe443f-82713-0-8493298778776079-package.lock
+27 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+28 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz /Users/elad/.npm/83fc4267-82713-0-8493298778776079-tmp-tgz.lock
 29 silly gunzTarPerm modes [ '755', '644' ]
 30 silly gunzTarPerm extractEntry package.json
 31 silly gunzTarPerm extractEntry .npmignore
 32 silly gunzTarPerm extractEntry README.md
-33 silly gunzTarPerm extractEntry index.js
-34 silly gunzTarPerm extractEntry .travis.yml
-35 silly gunzTarPerm extractEntry lib/messages.js
-36 silly gunzTarPerm extractEntry lib/enums/messagetype.js
-37 silly gunzTarPerm extractEntry lib/utils/basketutil.js
-38 verbose read json /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package/package.json
-39 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-40 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-41 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-42 silly lockFile 90a3a2a9-40075-0-4377688451204449-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/tmp.tgz
-43 verbose from cache /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package/package.json
-44 verbose tar pack [ '/Users/elad/.npm/roomsjs/0.0.27/package.tgz',
-44 verbose tar pack   '/var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package' ]
-45 verbose tarball /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-46 verbose folder /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-47 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-48 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package /Users/elad/.npm/4cb43e3c-40075-0-4377688451204449-package.lock
-49 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-50 verbose lock /Users/elad/.npm/roomsjs/0.0.27/package.tgz /Users/elad/.npm/e12accf1-d-npm-roomsjs-0-0-27-package-tgz.lock
-51 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-52 silly lockFile 4cb43e3c-40075-0-4377688451204449-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-4681/1371595740075-0.4377688451204449/package
-53 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-54 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-55 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-56 verbose lock /Users/elad/.npm/roomsjs/0.0.27/package /Users/elad/.npm/400c291c--elad-npm-roomsjs-0-0-27-package.lock
-57 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-58 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-59 verbose tar unpack /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-60 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-61 verbose lock /Users/elad/.npm/roomsjs/0.0.27/package /Users/elad/.npm/400c291c--elad-npm-roomsjs-0-0-27-package.lock
-62 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-63 verbose lock /Users/elad/.npm/roomsjs/0.0.27/package.tgz /Users/elad/.npm/e12accf1-d-npm-roomsjs-0-0-27-package-tgz.lock
-64 silly gunzTarPerm modes [ '755', '644' ]
-65 silly gunzTarPerm extractEntry package.json
-66 silly gunzTarPerm extractEntry .npmignore
-67 silly gunzTarPerm extractEntry README.md
-68 silly gunzTarPerm extractEntry index.js
-69 silly gunzTarPerm extractEntry .travis.yml
-70 silly gunzTarPerm extractEntry lib/messages.js
-71 silly gunzTarPerm extractEntry lib/enums/messagetype.js
-72 silly gunzTarPerm extractEntry lib/utils/basketutil.js
-73 verbose read json /Users/elad/.npm/roomsjs/0.0.27/package/package.json
-74 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-75 silly lockFile 400c291c--elad-npm-roomsjs-0-0-27-package /Users/elad/.npm/roomsjs/0.0.27/package
-76 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-77 silly lockFile e12accf1-d-npm-roomsjs-0-0-27-package-tgz /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-78 silly shasum updated bytes 4680
-79 info shasum d7477e6925df2a8a1fac25dae67a5815a2eb4fbc
-79 info shasum /Users/elad/.npm/roomsjs/0.0.27/package.tgz
-80 verbose from cache /Users/elad/.npm/roomsjs/0.0.27/package/package.json
-81 verbose chmod /Users/elad/.npm/roomsjs/0.0.27/package.tgz 644
-82 verbose chown /Users/elad/.npm/roomsjs/0.0.27/package.tgz [ 501, 20 ]
-83 silly lockFile 3a52ce78- .
-84 silly publish { name: 'roomsjs',
-84 silly publish   version: '0.0.27',
-84 silly publish   description: 'JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end',
-84 silly publish   main: 'index.js',
-84 silly publish   scripts: { test: 'listenToRoomEvents' },
-84 silly publish   repository: { type: 'git', url: 'https://github.com/EladElrom/RoomsJS.git' },
-84 silly publish   dependencies: { express: '3.0.0rc5', 'socket.io': '0.8.7' },
-84 silly publish   keywords: [ 'roomsjs', 'rooms', 'collaboration', '' ],
-84 silly publish   author: { name: 'Elad Elrom' },
-84 silly publish   license: 'BSD',
-84 silly publish   readme: '# JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end \n\nA Node.JS module, provides an object oriented wrapper for socketio for creating rooms and streaming data between users, streaming data from a database and even 3rd party services.\n`roomsjs` based on Socket.IO, `roomsdb` and `roomsjs-fronend` combine together provides a powerful light-weight backend/front-end libraries built to stream live data, stream data from a database and even stream 3rd party APIs.\n\nIt has features such as:\n\n    1. Connect to a room\n    2. Register a user\n    2. Request number of users\n    3. Private message\n    4. Video\n    5. Create multiple rooms\n    6. Store states.\n    7. Subscribe to data VO.\n    8. AMS Webcam\n    9. HTML5 Webcam\n    10. Database connector (mysql)\n\n## Installation\n\n  Install with the Node.JS package manager [npm](http://npmjs.org/):\n\n      $ npm install roomsjs\n      $ npm install rooms.db\n\nDownload the front-end code from:\n\n[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/enum/messagetype.js.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/enum/messagetype.js)\n[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.js)\n[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js)\n\nFront-end dependencies: `jquery.js`, `socket.io.js`\n\nDownload complete front-end example from here see `public` folder: \n[https://github.com/EladElrom/roomsjs-fronend](https://github.com/EladElrom/roomsjs-fronend)\n      \n## Example\n\nBack-end code to create the rooms services and connect to database and/or 3rd party APIs for streaming;\n\n<pre lang="javascript"><code>\nvar express     = require(\'express\'),\n    app         = express(),\n    os          = require(\'os\'),\n    http        = require(\'http\'),\n    server      = http.createServer(app),\n    rooms       = require(\'roomsjs\'),\n    dbconnector = require(\'rooms.db\'),\n    db_methods  = require(\'./roomsdb_sample/dbconnector_methods.js\'),\n    port        = (process.env.PORT || 8081);\n\napp.use(express.static(__dirname + \'/public\'));\n\nserver.listen(port, function() {\n    console.log(\'Listening on http://\' + os.hostname() + \':\' + port);\n});\n\ndbconnector.connectToDatabase(\'mysql\', \'localhost\', \'root\', \'\');\ndb_methods.setMethods(dbconnector);\n\nrooms = new rooms({ server : server, isdebug : true, socketio : null, dbconnector : dbconnector });\n</code></pre>\n\nFront-end example of getting the number of visitors:\n\n<pre lang="html">\n<code>\n&#60;html&#62;\n&#60;head&#62;\n    &#60;title&#62;Room controller&#60;/title&#62;\n\n    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/enums/messagetype.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/socketcontroller.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/autostartcontroller.js"&#62;&#60;/script&#62;\n&#60;body&#62;\n    &#60;button id="getResultsButton"&#62;Get results&#60;/button&#62;\n    &#60;div id="visitors" /&#62;\n&#60;/body&#62;\n&#60;/html&#62;\n</code>\n</pre>\n\nExample of streaming a pod consists of live camera feeds and text comment feed between different users on a page and dragging the pods;\n\n<pre lang="html"><code>\n&#60;html&#62;\n&#60;head&#62;\n    &#60;title&#62;Room controller&#60;/title&#62;\n\n    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/enums/messagetype.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/socketcontroller.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/controller.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/model/vo/clientvo.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/libs/swfobject.js"&#62;&#60;/script&#62;\n&#60;body&#62;\n\n&#60;div class="well" style="float: right; width: 300px; height: 300px; border: 1px solid #999;"&#62;\n    Click to start/stop dragging\n    &#60;button id="grabAllPodsButton"&#62;Grab all pods&#60;/button&#62;\n&#60;/div&#62;\n\n&#60;div id="visitors" /&#62;\n\n&#60;/body&#62;\n&#60;/html&#62;\n</code></pre>\n\n## Docs:\n\nBelow is a ten thousand foot diagram that shows how the different pieces of the platform are coming together. \n\n![backend diagram](https://raw.github.com/EladElrom/poet/ei-pages/effectiveidea/public/images/roomsjs-diagram1.png)\n<br><br>\n\nSee more information here: [http://effectiveidea.com/_posts/roomsjs](http://effectiveidea.com/_posts/roomsjs)\n<br><br>\n\n## LICENSE\n\nBSD license.\n\n',
-84 silly publish   readmeFilename: 'README.md',
-84 silly publish   _id: 'roomsjs@0.0.27',
-84 silly publish   dist: { shasum: 'd7477e6925df2a8a1fac25dae67a5815a2eb4fbc' },
-84 silly publish   _from: '.' }
-85 verbose url raw roomsjs
-86 verbose url resolving [ 'https://registry.npmjs.org/', './roomsjs' ]
-87 verbose url resolved https://registry.npmjs.org/roomsjs
-88 info trying registry request attempt 1 at 18:49:10
-89 http PUT https://registry.npmjs.org/roomsjs
-90 http 409 https://registry.npmjs.org/roomsjs
-91 verbose url raw roomsjs
-92 verbose url resolving [ 'https://registry.npmjs.org/', './roomsjs' ]
-93 verbose url resolved https://registry.npmjs.org/roomsjs
-94 info trying registry request attempt 1 at 18:49:11
-95 http GET https://registry.npmjs.org/roomsjs
-96 http 200 https://registry.npmjs.org/roomsjs
-97 error publish fail Cannot publish over existing version.
-97 error publish fail Update the 'version' field in package.json and try again.
-97 error publish fail
-97 error publish fail If the previous version was published in error, see:
-97 error publish fail     npm help unpublish
-97 error publish fail
-97 error publish fail To automatically increment version numbers, see:
-97 error publish fail     npm help version
-98 error System Darwin 12.4.0
-99 error command "node" "/usr/local/bin/npm" "publish"
-100 error cwd /Applications/XAMPP/xamppfiles/htdocs/roomsjs-fronend/node_modules/roomsjs
-101 error node -v v0.10.2
-102 error npm -v 1.2.15
-103 error code EPUBLISHCONFLICT
-104 verbose exit [ 1, true ]
+33 silly gunzTarPerm extractEntry LICENSE
+34 silly gunzTarPerm extractEntry index.js
+35 silly gunzTarPerm extractEntry .travis.yml
+36 silly gunzTarPerm extractEntry lib/messages.js
+37 silly gunzTarPerm extractEntry lib/enums/messagetype.js
+38 silly gunzTarPerm extractEntry lib/utils/basketutil.js
+39 verbose read json /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package/package.json
+40 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+41 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+42 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+43 silly lockFile 83fc4267-82713-0-8493298778776079-tmp-tgz /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/tmp.tgz
+44 verbose from cache /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package/package.json
+45 verbose tar pack [ '/Users/elad/.npm/roomsjs/0.0.21/package.tgz',
+45 verbose tar pack   '/var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package' ]
+46 verbose tarball /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+47 verbose folder /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+48 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+49 verbose lock /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package /Users/elad/.npm/6ebe443f-82713-0-8493298778776079-package.lock
+50 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+51 verbose lock /Users/elad/.npm/roomsjs/0.0.21/package.tgz /Users/elad/.npm/c6c5b003-d-npm-roomsjs-0-0-21-package-tgz.lock
+52 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+53 silly lockFile 6ebe443f-82713-0-8493298778776079-package /var/folders/z5/pgz_g5vj0qb135w3lp_lysph0000gn/T/npm-6301/1371671682713-0.8493298778776079/package
+54 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+55 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+56 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+57 verbose lock /Users/elad/.npm/roomsjs/0.0.21/package /Users/elad/.npm/d9d320e8--elad-npm-roomsjs-0-0-21-package.lock
+58 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+59 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+60 verbose tar unpack /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+61 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+62 verbose lock /Users/elad/.npm/roomsjs/0.0.21/package /Users/elad/.npm/d9d320e8--elad-npm-roomsjs-0-0-21-package.lock
+63 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+64 verbose lock /Users/elad/.npm/roomsjs/0.0.21/package.tgz /Users/elad/.npm/c6c5b003-d-npm-roomsjs-0-0-21-package-tgz.lock
+65 silly gunzTarPerm modes [ '755', '644' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry .npmignore
+68 silly gunzTarPerm extractEntry README.md
+69 silly gunzTarPerm extractEntry LICENSE
+70 silly gunzTarPerm extractEntry index.js
+71 silly gunzTarPerm extractEntry .travis.yml
+72 silly gunzTarPerm extractEntry lib/messages.js
+73 silly gunzTarPerm extractEntry lib/enums/messagetype.js
+74 silly gunzTarPerm extractEntry lib/utils/basketutil.js
+75 verbose read json /Users/elad/.npm/roomsjs/0.0.21/package/package.json
+76 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+77 silly lockFile d9d320e8--elad-npm-roomsjs-0-0-21-package /Users/elad/.npm/roomsjs/0.0.21/package
+78 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+79 silly lockFile c6c5b003-d-npm-roomsjs-0-0-21-package-tgz /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+80 silly shasum updated bytes 5444
+81 info shasum a842c87c43b36c03ba8f317eabbce3c98add0e37
+81 info shasum /Users/elad/.npm/roomsjs/0.0.21/package.tgz
+82 verbose from cache /Users/elad/.npm/roomsjs/0.0.21/package/package.json
+83 verbose chmod /Users/elad/.npm/roomsjs/0.0.21/package.tgz 644
+84 verbose chown /Users/elad/.npm/roomsjs/0.0.21/package.tgz [ 501, 20 ]
+85 silly lockFile 3a52ce78- .
+86 silly publish { name: 'roomsjs',
+86 silly publish   version: '0.0.21',
+86 silly publish   description: 'JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end',
+86 silly publish   main: 'index.js',
+86 silly publish   scripts: { test: 'listenToRoomEvents' },
+86 silly publish   repository: { type: 'git', url: 'https://github.com/EladElrom/RoomsJS.git' },
+86 silly publish   dependencies: { express: '3.0.0rc5', 'socket.io': '0.8.7' },
+86 silly publish   keywords: [ 'roomsjs', 'rooms', 'collaboration', '' ],
+86 silly publish   author: { name: 'Elad Elrom' },
+86 silly publish   license: 'BSD',
+86 silly publish   readme: '# JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end \n\nA Node.JS module, provides an object oriented wrapper for socketio for creating rooms and streaming data between users, streaming data from a database and even 3rd party services.\n`roomsjs` based on Socket.IO, `roomsdb` and `roomsjs-fronend` combine together provides a powerful light-weight backend/front-end libraries built to stream live data, stream data from a database and even stream 3rd party APIs.\n\nIt has features such as:\n\n    1. Connect to a room\n    2. Register a user\n    2. Request number of users\n    3. Private message\n    4. Video\n    5. Create multiple rooms\n    6. Store states.\n    7. Subscribe to data VO.\n    8. AMS Webcam\n    9. HTML5 Webcam\n    10. Database connector (mysql)\n\n## Installation\n\n  Install with the Node.JS package manager [npm](http://npmjs.org/):\n\n      $ npm install roomsjs\n      $ npm install rooms.db\n\nDownload the front-end min file:\n[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/libs/socketcontroller.min.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/socketcontroller.min.js)\n\nExample of front-end implementation of `socketcontroller`:\n[https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-fronend/master/public/js/autostartcontroller.js)\n\nFront-end dependencies: `jquery.js`, `socket.io.js`\n\nDownload complete front-end example from here see `public` folder: \n[https://github.com/EladElrom/roomsjs-fronend](https://github.com/EladElrom/roomsjs-fronend)\n      \n## Example\n\nBack-end code to create the rooms services and connect to database and/or 3rd party APIs for streaming;\n\n<pre lang="javascript"><code>\nvar express     = require(\'express\'),\n    app         = express(),\n    os          = require(\'os\'),\n    http        = require(\'http\'),\n    server      = http.createServer(app),\n    rooms       = require(\'roomsjs\'),\n    roomdb = require(\'rooms.db\'),\n    port        = (process.env.PORT || 8081);\n\napp.use(express.static(__dirname + \'/public\'));\n\nserver.listen(port, function () {\n    console.log(\'Listening on http://\' + os.hostname() + \':\' + port);\n});\n\n// services\nroomdb.setServices(\'roomsdb_services_sample/\');\n\n// connect database\nroomdb.connectToDatabase(\'mysql\', \'localhost\', \'root\', \'\');\n\n// set rooms\nrooms = new rooms({\n    server : server,\n    isdebug : true,\n    socketio : null,\n    roomdb : roomdb /* or null if no db needed */\n});\n</code></pre>\n\nFront-end example of getting the number of visitors:\n\n<pre lang="html">\n<code>\n&#60;html&#62;\n&#60;head&#62;\n    &#60;title&#62;Room controller&#60;/title&#62;\n\n    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/autostartcontroller.js"&#62;&#60;/script&#62;\n&#60;body&#62;\n    &#60;button id="getResultsButton"&#62;Get results&#60;/button&#62;\n    &#60;div id="visitors" /&#62;\n&#60;/body&#62;\n&#60;/html&#62;\n</code>\n</pre>\n\nExample of streaming a pod consists of live camera feeds and text comment feed between different users on a page and dragging the pods;\n\n<pre lang="html"><code>\n&#60;html&#62;\n&#60;head&#62;\n    &#60;title&#62;Room controller&#60;/title&#62;\n\n    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/controller.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/model/vo/clientvo.js"&#62;&#60;/script&#62;\n    &#60;script type="text/javascript" src="/js/libs/swfobject.js"&#62;&#60;/script&#62;\n&#60;body&#62;\n\n&#60;div class="well" style="float: right; width: 300px; height: 300px; border: 1px solid #999;"&#62;\n    Click to start/stop dragging\n    &#60;button id="grabAllPodsButton"&#62;Grab all pods&#60;/button&#62;\n&#60;/div&#62;\n\n&#60;div id="visitors" /&#62;\n\n&#60;/body&#62;\n&#60;/html&#62;\n</code></pre>\n\n## Docs:\n\nBelow is a ten thousand foot diagram that shows how the different pieces of the platform are coming together. \n\n![backend diagram](https://raw.github.com/EladElrom/poet/ei-pages/effectiveidea/public/images/roomsjs-diagram1.png)\n<br><br>\n\nSee more information here: [http://effectiveidea.com/_posts/roomsjs](http://effectiveidea.com/_posts/roomsjs)\n<br><br>\n\n## LICENSE\n\nBSD license.\n\n',
+86 silly publish   readmeFilename: 'README.md',
+86 silly publish   _id: 'roomsjs@0.0.21',
+86 silly publish   dist: { shasum: 'a842c87c43b36c03ba8f317eabbce3c98add0e37' },
+86 silly publish   _from: '.' }
+87 verbose url raw roomsjs
+88 verbose url resolving [ 'https://registry.npmjs.org/', './roomsjs' ]
+89 verbose url resolved https://registry.npmjs.org/roomsjs
+90 info trying registry request attempt 1 at 15:54:54
+91 http PUT https://registry.npmjs.org/roomsjs
+92 http 409 https://registry.npmjs.org/roomsjs
+93 verbose url raw roomsjs
+94 verbose url resolving [ 'https://registry.npmjs.org/', './roomsjs' ]
+95 verbose url resolved https://registry.npmjs.org/roomsjs
+96 info trying registry request attempt 1 at 15:54:54
+97 http GET https://registry.npmjs.org/roomsjs
+98 http 200 https://registry.npmjs.org/roomsjs
+99 error publish fail Cannot publish over existing version.
+99 error publish fail Update the 'version' field in package.json and try again.
+99 error publish fail
+99 error publish fail If the previous version was published in error, see:
+99 error publish fail     npm help unpublish
+99 error publish fail
+99 error publish fail To automatically increment version numbers, see:
+99 error publish fail     npm help version
+100 error System Darwin 12.4.0
+101 error command "node" "/usr/local/bin/npm" "publish"
+102 error cwd /Applications/XAMPP/xamppfiles/htdocs/roomsjs-fronend/node_modules/roomsjs
+103 error node -v v0.10.2
+104 error npm -v 1.2.15
+105 error code EPUBLISHCONFLICT
+106 verbose exit [ 1, true ]
