@@ -1,7 +1,10 @@
-# JavaScript Node.JS module for creating rooms, streaming data between front-end and back-end built to support different transporters
+# roomsjs - streaming live data built to support different transporters
 
-A Node.JS module, provides an object oriented wrapper for different transporters such as `socketio` for creating rooms and streaming data between users, streaming data from a database and even 3rd party services.
-`roomsjs`, `roomsdb` and `roomsjs-client` combine together a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to realtime communications, stream data from a database and even stream 3rd party APIs.
+[![Build Status](https://secure.travis-ci.org/EladElrom/roomsjs-client.png)](http://travis-ci.org/EladElrom/roomsjs-client)
+[![NPM version](https://badge.fury.io/js/roomsjs.png)](http://badge.fury.io/js/roomsjs)
+
+A Javascript Node.JS module, provides an object oriented wrapper for different transporters for creating rooms and streaming data between users, streaming data from a database and even other CDNs.
+`roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to realtime communications, stream data from a database and even stream 3rd party APIs.
 
 It has features such as:
 
@@ -19,7 +22,7 @@ It has features such as:
 
 ## Installation
 
-  Install with the Node.JS package manager [npm](http://npmjs.org/):
+  Install with the Node.JS package manager [npm](http://travis-ci.org/EladElrom/roomsjs-client):
 
       $ npm install roomsjs
       $ npm install rooms.db
@@ -28,7 +31,7 @@ Download the front-end min file:
 [https://raw.github.com/EladElrom/roomsjs-client/master/public/js/libs/socketcontroller.min.js](https://raw.github.com/EladElrom/roomsjs-client/master/public/js/socketcontroller.min.js)
 
 Example of front-end implementation of `socketcontroller`:
-[https://raw.github.com/EladElrom/roomsjs-client/master/public/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-client/master/public/js/autostartcontroller.js)
+[https://raw.github.com/EladElrom/roomsjs-client/master/client/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-client/master/public/js/autostartcontroller.js)
 
 Front-end dependencies: `jquery.js`, transporter such as `socket.io.js`
 
