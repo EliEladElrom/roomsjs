@@ -22,21 +22,17 @@ It has features such as:
 
 ## Installation
 
-  Install with the Node.JS package manager [npm](http://travis-ci.org/EladElrom/roomsjs-client):
+  Install with the Node.JS package manager npm:
 
       $ npm install roomsjs
       $ npm install rooms.db
 
 Download the front-end min file:
-[https://raw.github.com/EladElrom/roomsjs-client/master/public/js/libs/socketcontroller.min.js](https://raw.github.com/EladElrom/roomsjs-client/master/public/js/socketcontroller.min.js)
+[https://raw.github.com/EladElrom/roomsjs-client/master/client/dist/libs/rooms.min.js](https://raw.github.com/EladElrom/roomsjs-client/master/client/dist/libs/rooms.min.js)
 
-Example of front-end implementation of `socketcontroller`:
-[https://raw.github.com/EladElrom/roomsjs-client/master/client/js/autostartcontroller.js](https://raw.github.com/EladElrom/roomsjs-client/master/public/js/autostartcontroller.js)
+Examples of front-end implementation of `rooms`:
 
-Front-end dependencies: `jquery.js`, transporter such as `socket.io.js`
-
-Download complete front-end example from here see `client` folder:
-[https://github.com/EladElrom/roomsjs-client](https://github.com/EladElrom/roomsjs-client)
+> client/js/components
 
 ## Example
 
@@ -73,17 +69,16 @@ rooms = new rooms({
 });
 </code></pre>
 
-Front-end example of getting the number of visitors:
+Front-end example of getting the number of visitors and data from external sources:
 
 <pre lang="html">
 <code>
 &#60;html&#62;
 &#60;head&#62;
-    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/jquery.min.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/autostartcontroller.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="../../dist/libs/rooms.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/autostartcontroller.js"&#62;&#60;/script&#62;
 &#60;body&#62;
     &#60;button id="getResultsButton"&#62;Get results&#60;/button&#62;
     &#60;div id="visitors" /&#62;
@@ -97,22 +92,20 @@ Example of streaming a pod consists of live camera feeds and text comment feed b
 <pre lang="html"><code>
 &#60;html&#62;
 &#60;head&#62;
-    &#60;script type="text/javascript" src="js/libs/jquery.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="js/libs/jquery-ui.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/jquery.min.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/jquery-ui.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/swfobject.js"&#62;&#60;/script&#62;
     &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/libs/socketcontroller.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/controller.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/model/vo/clientvo.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/js/libs/swfobject.js"&#62;&#60;/script&#62;
-&#60;body&#62;
+    &#60;script type="text/javascript" src="../../dist/libs/rooms.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/controller.js"&#62;&#60;/script&#62;
+    &#60;script type="text/javascript" src="libs/model/vo/clientvo.js"&#62;&#60;/script&#62;
 
+&#60;body&#62;
 &#60;div class="well" style="float: right; width: 300px; height: 300px; border: 1px solid #999;"&#62;
     Click to start/stop dragging
     &#60;button id="grabAllPodsButton"&#62;Grab all pods&#60;/button&#62;
 &#60;/div&#62;
-
 &#60;div id="visitors" /&#62;
-
 &#60;/body&#62;
 &#60;/html&#62;
 </code></pre>
