@@ -1,6 +1,6 @@
 {
   "name": "roomsjs",
-  "version": "0.0.30-beta1",
+  "version": "0.0.30-beta2",
   "description": "JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "https://github.com/EladElrom/RoomsJS.git"
   },
   "dependencies": {
-      "socket.io" : "0.8.7"
+    "socket.io": "0.8.7",
+    "engine.io": "~0.6.3"
   },
   "keywords": [
     "roomsjs",
@@ -22,4 +23,3 @@
   "author": "Elad Elrom",
   "license": "BSD"
 }
-

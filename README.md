@@ -3,8 +3,10 @@
 [![Build Status](https://secure.travis-ci.org/EladElrom/roomsjs-client.png)](http://travis-ci.org/EladElrom/roomsjs-client)
 [![NPM version](https://badge.fury.io/js/roomsjs.png)](http://badge.fury.io/js/roomsjs)
 
-A Javascript Node.JS module, provides an object oriented wrapper for different transporters for creating rooms and streaming data between users, streaming data from a database and even other CDNs.
+A Javascript Node.JS module, provides a way to switch different transporters for creating rooms and streaming data between users, streaming data from a database and even stream from CDNs.
 `roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to realtime communications, stream data from a database and even stream 3rd party APIs.
+
+The technology still young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter so the idea is to solve problem by allowing using different transporters and modify client implementation instead of having to do an open heart surgery when you are already committed to one technology or another.
 
 It has features such as:
 
@@ -18,7 +20,8 @@ It has features such as:
     7. Subscribe to data VO.
     8. AMS Flash Webcam fallback
     9. HTML5 Webcam
-    10. Database connector (such as mysql)
+    10. Database connector (such as mysql).
+    11. Switch different transporters: supports `socket.io`, `engine.io` and soon `SockJS`
 
 ## Installation
 
@@ -68,6 +71,19 @@ rooms = new rooms({
     roomdb : roomdb /* or null */
 });
 </code></pre>
+
+To set engine.io as the transporter use:
+
+<pre lang="javascript">
+rooms = new rooms({
+    isdebug : true,
+    transporter : {
+        type: 'engine.io',
+        server : server
+    },
+    roomdb : roomdb
+});
+</pre>
 
 Front-end example of getting the number of visitors and data from external sources:
 
