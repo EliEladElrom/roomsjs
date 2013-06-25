@@ -6,7 +6,11 @@
 A Javascript Node.JS module, provides a way to switch different transporters for creating rooms and streaming data between users, streaming data from a database and even stream from CDNs.
 `roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to realtime communications, stream data from a database and even stream 3rd party APIs.
 
-The technology still young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter so the idea is to solve problem by allowing using different transporters and modify client implementation instead of having to do an open heart surgery when you are already committed to one technology or another.
+Node.js technology still relatively young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter on certain `nodejs` version such as memory leaks.
+In these cases, you could just switch and use `SockJS` in this module or whatever will come next in the future.
+
+The idea is to solve the problem by allowing using different transporters and modify client implementation instead of having to do an open heart surgery when you are already committed to one transporter or another.
+`socket.io` underline high level API is `engine.io`, but there are cases where you want to have the `socket.io` for emitter event functionality for instance.  `rooms.js` is a lower level API, just like `socket.io`, however it's lighter weight and doesn't have the sugar and all the bell and whistle of `socket.io`.
 
 It has features such as:
 
@@ -21,7 +25,7 @@ It has features such as:
     8. AMS Flash Webcam fallback
     9. HTML5 Webcam
     10. Database connector (such as mysql).
-    11. Switch different transporters: supports `socket.io`, `engine.io` and soon `SockJS`
+    11. Switch different transporters: currently supporting `socket.io`, `engine.io` and `SockJS`.
 
 ## Installation
 
@@ -72,16 +76,47 @@ rooms = new rooms({
 });
 </code></pre>
 
-To set engine.io as the transporter use:
+To set `engine.io` as the transporter use:
 
 <pre lang="javascript">
+      rooms = new rooms({
+          isdebug : true,
+          transporter : {
+              type: 'engine.io',
+              server : server
+          },
+          roomdb : roomdb
+      });
+</pre>
+
+To set `sockjs` as the transporter, just add `0.0.0.0` to server listener and use `sockjs` as the transporter type;
+
+<pre lang="javascript">
+var os          = require('os'),
+    rooms       = require('roomsjs'),
+    roomdb      = require('rooms.db'),
+    port        = (process.env.PORT || 8081);
+
+// create express server if needed
+var express     = require('express'),
+    app         = express().use(express.static(__dirname + '/client'));
+
+// create server
+var server = require('http').createServer(app).listen(port, '0.0.0.0');
+
+// services
+roomdb.setServices('services_sample/');
+// connect database/s if needed
+roomdb.connectToDatabase('mysql', 'localhost', 'root', '');
+
+// set rooms
 rooms = new rooms({
     isdebug : true,
     transporter : {
-        type: 'engine.io',
+        type: 'sockjs',
         server : server
     },
-    roomdb : roomdb
+    roomdb : roomdb /* or null */
 });
 </pre>
 
