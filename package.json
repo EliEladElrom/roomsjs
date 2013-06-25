@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "socket.io": "0.8.7",
-    "engine.io": "~0.6.3"
+    "engine.io": "~0.6.3",
+    "sockjs": "~0.3.7"
   },
   "keywords": [
     "roomsjs",
