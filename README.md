@@ -1,18 +1,19 @@
 # roomsjs - streaming live data built to support different transporters
 
-[![Build Status](https://secure.travis-ci.org/EladElrom/roomsjs-client.png)](http://travis-ci.org/EladElrom/roomsjs-client)
+[![Build Status](https://secure.travis-ci.org/eladelrom/roomsjs-client.png)](http://travis-ci.org/eladelrom/roomsjs-client)
 [![NPM version](https://badge.fury.io/js/roomsjs.png)](http://badge.fury.io/js/roomsjs)
 
-A Javascript Node.JS module, provides a way to switch different transporters for creating rooms and streaming data between users, streaming data from a database and even stream from CDNs.
-`roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to realtime communications, stream data from a database and even stream 3rd party APIs.
+A Javascript Node.JS module, provides a way to send and receive messages and switch different transporters for creating rooms and streaming data between users, streaming data from a database and even stream from a 3rd party CDN.
+`roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to real-time communications.
 
-Node.js technology still relatively young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter on certain `nodejs` version such as memory leaks.
-In these cases, you could just switch and use `SockJS` in this module or whatever will come next in the future.
+Node.js technology relatively young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter on certain `nodejs` version.
 
-The idea is to solve the problem by allowing using different transporters and modify client implementation instead of having to do an open heart surgery when you are already committed to one transporter or another.
-`socket.io` underline high level API is `engine.io`, but there are cases where you want to have the `socket.io` for emitter event functionality for instance.  `rooms.js` is a lower level API, just like `socket.io`, however it's lighter weight and doesn't have the sugar and all the bell and whistle of `socket.io`.
+The API was built to allow you to just 'switch' and use any transporter and create your own implementation. Module also have additional feature to help managing rooms easily.
 
-It has features such as:
+The idea is to give a simple API and allowing using different transporters and modify the client implementation instead of having to do an 'open heart surgery' when you are already committed to one transporter API or another.
+It's recommended to use `engine.io` since it's the high level API of `socket.io`, however there are cases where you want to have the `socket.io` bloated code for certain functionality.  `rooms.js` is a lower level API, just like `socket.io`, however it's lighter weight and doesn't have the sugar and all the bell and whistle of `socket.io`, so it's here for you to use.
+
+`roomsjs` has features such as:
 
     1. Connect to a room
     2. Register a user
@@ -22,8 +23,8 @@ It has features such as:
     5. Create multiple rooms
     6. Store states.
     7. Subscribe to data VO.
-    8. AMS Flash Webcam fallback
-    9. HTML5 Webcam
+    8. AMS/FMS Flash Webcam fallback
+    9. HTML5 Webcam (still in development)
     10. Database connector (such as mysql).
     11. Switch different transporters: currently supporting `socket.io`, `engine.io` and `SockJS`.
 
@@ -34,16 +35,16 @@ It has features such as:
       $ npm install roomsjs
       $ npm install rooms.db
 
-Download the front-end min file:
-[https://raw.github.com/EladElrom/roomsjs-client/master/client/dist/libs/rooms.min.js](https://raw.github.com/EladElrom/roomsjs-client/master/client/dist/libs/rooms.min.js)
+Download the front-end roomjs min file:
+[https://raw.github.com/eladelrom/roomsjs-client/master/client/dist/libs/rooms.min.js](https://raw.github.com/eladelrom/roomsjs-client/master/client/dist/libs/rooms.min.js)
 
-Examples of front-end implementation of `rooms`:
+or using bower:
 
-> client/js/components
+> bower install roomsjs-client
 
 ## Example
 
-Back-end code to create the rooms services and connect to database and/or 3rd party APIs for streaming;
+Server code to create the rooms, services and connect to database and/or 3rd party APIs for streaming;
 
 <pre lang="javascript"><code>
 var os          = require('os'),
@@ -122,50 +123,20 @@ rooms = new rooms({
 
 Front-end example of getting the number of visitors and data from external sources:
 
-<pre lang="html">
-<code>
-&#60;html&#62;
-&#60;head&#62;
-    &#60;script type="text/javascript" src="libs/jquery.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="../../dist/libs/rooms.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="libs/autostartcontroller.js"&#62;&#60;/script&#62;
-&#60;body&#62;
-    &#60;button id="getResultsButton"&#62;Get results&#60;/button&#62;
-    &#60;div id="visitors" /&#62;
-&#60;/body&#62;
-&#60;/html&#62;
-</code>
+Examples of front-end implementation of `rooms` includes connecting to `engine.io`, `socket.io` and `sockjs` see here:
+
+<pre>
+client/examples/engineio
+                socketio
+                sockjs
+
 </pre>
-
-Example of streaming a pod consists of live camera feeds and text comment feed between different users on a page and dragging the pods;
-
-<pre lang="html"><code>
-&#60;html&#62;
-&#60;head&#62;
-    &#60;script type="text/javascript" src="libs/jquery.min.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="libs/jquery-ui.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="libs/swfobject.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="/socket.io/socket.io.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="../../dist/libs/rooms.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="libs/controller.js"&#62;&#60;/script&#62;
-    &#60;script type="text/javascript" src="libs/model/vo/clientvo.js"&#62;&#60;/script&#62;
-
-&#60;body&#62;
-&#60;div class="well" style="float: right; width: 300px; height: 300px; border: 1px solid #999;"&#62;
-    Click to start/stop dragging
-    &#60;button id="grabAllPodsButton"&#62;Grab all pods&#60;/button&#62;
-&#60;/div&#62;
-&#60;div id="visitors" /&#62;
-&#60;/body&#62;
-&#60;/html&#62;
-</code></pre>
 
 ## Docs:
 
 Below is a ten thousand foot diagram that shows how the different pieces of the platform are coming together.
 
-![backend diagram](https://raw.github.com/EladElrom/poet/ei-pages/effectiveidea/public/images/roomsjs-diagram1.png)
+![backend diagram](https://raw.github.com/eladelrom/poet/ei-pages/effectiveidea/public/images/roomsjs-diagram1.png)
 <br><br>
 
 See more information here about init concept read here: [http://effectiveidea.com/_posts/roomsjs](http://effectiveidea.com/_posts/roomsjs)
