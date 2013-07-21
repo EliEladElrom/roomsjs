@@ -27,7 +27,7 @@ It's recommended to use `engine.io` since it's the high level API of `socket.io`
     7. Subscribe to data VO.
     8. AMS/FMS Flash Webcam fallback
     9. HTML5 Webcam (still in development)
-    10. Database connector (such as mysql).
+    10. Database connector (such as mysql, mongodb).
     11. Switch different transporters: currently supporting `socket.io`, `engine.io` and `SockJS`.
     12. Angularjs implementation
 
@@ -50,14 +50,16 @@ Or install with bower:
 Server code to create the rooms, services and connect to database and/or 3rd party APIs for streaming;
 
 <pre lang="javascript">
-var os          = require('os'),
-  rooms       = require('roomsjs'),
-  roomdb      = require('rooms.db'),
-  port        = (process.env.PORT || 8081);
+'use strict';
+
+var os = require('os'),
+  rooms = require('roomsjs'),
+  roomdb = require('rooms.db'),
+  port = (process.env.PORT || 8081);
 
 // create express server if needed
-var express     = require('express'),
-  app         = express().use(express.static(__dirname + '/client'));
+var express = require('express'),
+  app = express().use(express.static(__dirname + '/client'));
 
 // engine.io, socket.io
 var server = require('http').createServer(app).listen(port, function () {
@@ -68,8 +70,12 @@ var server = require('http').createServer(app).listen(port, function () {
 
 // services
 roomdb.setServices('services_sample/');
-// connect database/s if needed
-roomdb.connectToDatabase('mysql', 'localhost', 'root', '');
+
+// connect to different database/s if needed
+// Mysql:
+// roomdb.connectToDatabase('mysql', 'localhost', 'root', '');
+// MongoDB
+roomdb.connectToDatabase('mongoose', 'localhost', 'test', '');
 
 // set rooms
 rooms = new rooms({
@@ -88,10 +94,12 @@ Front-end example of getting the number of visitors and data from external sourc
 Examples of front-end implementation of `rooms` includes connecting to `engine.io`, `socket.io` and `sockjs` see here:
 
 <pre>
-client/examples/engineio
-                socketio
-                sockjs
-                angular
+client/
+  |- examples/
+  |  |  |- engineio
+  |  |  |- socketio
+  |  |  |- sockjs  
+  |  |  |- angular  
 </pre>
 
 ## Docs:
