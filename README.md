@@ -73,9 +73,9 @@ roomdb.setServices('services_sample/');
 
 // connect to different database/s if needed
 // Mysql:
-// roomdb.connectToDatabase('mysql', 'localhost', 'root', '');
+// roomdb.connectToDatabase('mysql', 'localhost', {user: 'root', password: ''});
 // MongoDB
-roomdb.connectToDatabase('mongoose', 'localhost', 'test', '');
+roomdb.connectToDatabase('mongodb', 'mongodb://localhost/test', {});
 
 // set rooms
 rooms = new rooms({
@@ -88,6 +88,16 @@ rooms = new rooms({
 });
 </pre>
 
+Roomsdb services examples:
+
+<pre>
+services_example/
+  |- examples/
+  |  |  |- cloudsearch.js [Cloud Search data source example]
+  |  |  |- getitems.js [mySQL data source example]
+  |  |  |- getnames.js [Static data example]
+  |  |  |- insertchatmessage.js [Mongodb example]
+</pre>
 
 Front-end example of getting the number of visitors and data from external sources:
 
@@ -98,8 +108,8 @@ client/
   |- examples/
   |  |  |- engineio
   |  |  |- socketio
-  |  |  |- sockjs  
-  |  |  |- angular  
+  |  |  |- sockjs
+  |  |  |- angular
 </pre>
 
 ## Docs:
