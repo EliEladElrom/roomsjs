@@ -45,7 +45,13 @@ Or install with bower:
 
 > bower install roomsjs-client
 
-## Example
+## Quick getting started example
+
+create a project and install packages:
+
+cd ~/dev
+mkdir rooms && cd $_
+npm install roomsjs rooms.db express
 
 Server code to create the rooms, services and connect to database and/or 3rd party APIs for streaming;
 
@@ -88,7 +94,7 @@ rooms = new rooms({
 });
 </pre>
 
-Roomsdb services examples:
+Rooms.db services examples:
 
 <pre>
 services_example/
