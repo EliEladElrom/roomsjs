@@ -7,7 +7,7 @@ var os = require('os'),
 
 // create express server if needed
 var express = require('express'),
-  app = express().use(express.static(__dirname + '/client'));
+  app = express().use(express.static(__dirname + '/public'));
 
 // engine.io, socket.io
 var server = require('http').createServer(app).listen(port, function () {
