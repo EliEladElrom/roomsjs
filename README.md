@@ -82,6 +82,8 @@ roomdb.setServices('services_sample/', app); // pass the app to get rest service
 // roomdb.connectToDatabase('mysql', 'localhost', {user: 'root', password: ''});
 // MongoDB
 roomdb.connectToDatabase('mongodb', 'mongodb://localhost/test', {});
+// LevelDB
+roomdb.connectToDatabase('leveldb', './mydb', {});
 
 // set rooms
 rooms = new rooms({
