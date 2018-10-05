@@ -1,6 +1,6 @@
 {
   "name": "roomsjs",
-  "version": "0.1.42",
+  "version": "0.1.5",
   "description": "JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,13 @@
   "dependencies": {
     "socket.io": "0.8.7",
     "engine.io": "~0.6.3",
-    "sockjs": "~0.3.7"
+    "sockjs": "~0.3.7",
+    "level": "^4.0.0",
+    "dat-swarm-defaults": "^1.0.1",
+    "discovery-swarm": "^5.1.2",
+    "crypto-js": "latest",
+    "express": "latest",
+    "get-port": "^4.0.0"
   },
   "keywords": [
     "roomsjs",

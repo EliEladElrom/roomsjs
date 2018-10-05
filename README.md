@@ -36,6 +36,7 @@ It's recommended to use `engine.io` since it's the high level API of `socket.io`
     10. Database connector (such as mysql, mongodb).
     12. Angularjs implementation
     13. Create Express HTTP service connecting to databases with websocket using same code
+    14. Add multiple nodejs apps interact as a client
     
 ## Installation
 
@@ -151,6 +152,45 @@ setTimeout(function(){
 }, 5000);
 </pre>
 The full working example is here: roomsjs-client/client/examples/collaborate.
+
+Here is an example of having multiple peers (other `nodejs`  apps) interacting with a room.  You can join and register a user as well as send/receive messages just as a Web Client;
+
+<pre>
+implementation example: let p2pslave = require('./node_modules/roomsjs/lib/utils/p2pslave.js'),
+    messagetype = require('./node_modules/roomsjs/lib/enums/messagetype.js'),
+    crypto = require('crypto');
+
+let myPeerId = crypto.randomBytes(32);
+
+p2pslave.initPeer('roomsjs', p2pslave.PEER_SLAVE, myPeerId);
+
+setTimeout(function(){
+    console.log('-------- send message -------- ');
+    p2pslave.writeMessage({
+        type: messagetype.JOIN_ROOM,
+        data: {
+            'roomName': 'tester',
+            subscriptions : {
+                RoomInfoVO: true,
+                ClientVO: true
+            }
+        }
+    });
+}, 2000);
+
+setTimeout(function(){
+    console.log('-------- send message -------- ');
+    p2pslave.writeMessage({
+        type: messagetype.REGISTER,
+        data: {
+            'roomName': 'tester',
+            'userId' : myPeerId.toString('hex'),
+            isRobot: true,
+            isP2P: true
+        }
+    });
+}, 4000); 
+</pre>
 
 Rooms.db services examples:
 [https://github.com/eladelrom/roomsdb](https://github.com/eladelrom/roomsdb)
