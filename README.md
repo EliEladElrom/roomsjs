@@ -8,6 +8,11 @@
 A Javascript Node.JS module, provides a way to send and receive messages and switch different transporters for creating rooms and streaming data between users, streaming data from a database and even stream from a 3rd party CDN.
 `roomsjs`, `roomsdb` and `roomsjs-client` together combine a powerful light-weight backend/front-end libraries built to stream live data and solve same problems related to real-time communications.
 
+This library is split into three projects:
+1) roomsjs - [https://github.com/eladelrom/roomsjs](https://github.com/eladelrom/roomsjs)
+2) rooms.db - [https://github.com/eladelrom/roomsdb](https://github.com/eladelrom/roomsdb)
+3) roomsjs-client -  [https://github.com/eladelrom/roomsjs-client](https://github.com/eladelrom/roomsjs-client)
+
 Node.js technology relatively young and memory leaks were found in `socket.io` and issues around `engine.io`'s `Websocket` transporter on certain `nodejs` version.
 
 The API was built to allow you to just 'switch' and use any transporter and create your own implementation. Module also have additional feature to help managing rooms easily.
@@ -23,14 +28,15 @@ It's recommended to use `engine.io` since it's the high level API of `socket.io`
     3. Private message
     4. Video
     5. Create multiple rooms
-    6. Store states.
-    7. Subscribe to data VO.
+    6. Store states
+    7. Subscribe to data VO
     8. AMS/FMS Flash Webcam fallback
-    9. HTML5 Webcam (still in development)
-    10. Database connector (such as mysql, mongodb).
+    9. Ability to register internal robot to send messages
     11. Switch different transporters: currently supporting `socket.io`, `engine.io` and `SockJS`.
+    10. Database connector (such as mysql, mongodb).
     12. Angularjs implementation
-
+    13. Create Express HTTP service connecting to databases with websocket using same code
+    
 ## Installation
 
   Install with the Node.JS package manager npm:
@@ -81,22 +87,73 @@ roomdb.setServices('services_sample/', app); // pass the app to get rest service
 // Mysql:
 // roomdb.connectToDatabase('mysql', 'localhost', {user: 'root', password: ''});
 // MongoDB
-roomdb.connectToDatabase('mongodb', 'mongodb://localhost/test', {});
+// roomdb.connectToDatabase('mongodb', 'mongodb://localhost/test', {});
 // LevelDB
 roomdb.connectToDatabase('leveldb', './mydb', {});
+
+let transporterCallback = (type, data) => {
+    console.log('transporterCallback :: type: ' + type + '' + ', data: ' +JSON.stringify( data));
+    if (data.hasOwnProperty('register')) {
+        console.log('transporterCallback :: register userId: ' + data.register);
+    } else if (data.hasOwnProperty('disconnect')) {
+        console.log('transporterCallback :: disconnect userId: ' + data.disconnect);
+    }
+};
 
 // set rooms
 rooms = new rooms({
   isdebug : true,
   transporter : {
     type: 'engine.io', /* options: engine.io|socket.io|sockjs */
-    server : server
+    server : server,
+    transporterCallback: transporterCallback
   },
   roomdb : roomdb /* or null if db not needed */
 });
 </pre>
 
+Here is an example of an internal Robot signing in as a user:
+<pre>
+// Internal Robot connects to room and send data to all collaborate users
+let messagetype = require('./node_modules/roomsjs/lib/enums/messagetype.js');
+let robotMsgCallback = (type, data) => {
+    console.log('robotMsgCallback :: type: ' + type + '' + ', data: ' + JSON.stringify(data));
+};
+
+setTimeout(function(){
+    console.log('-------- joinRoom -------- ');
+    rooms[messagetype.JOIN_ROOM]({
+        'roomName': 'tester',
+        subscriptions : {
+            RoomInfoVO : true,
+            ClientVO : true
+        }
+    });
+
+    rooms[messagetype.REGISTER]({
+        'roomName': 'tester',
+        'userId' : 'robot',
+        isRobot: true,
+        robotMsgCallback: robotMsgCallback
+    });
+
+    setTimeout(function(){
+        console.log('-------- store change -------- ');
+        rooms[messagetype.STORE_STATE]({"roomName":"tester","name":"ClientVO","vo":{"clientId":"robot","mouseX":0,"mouseY":0,"comment":"","isDrag":true},"userId":"robot"});
+    }, 5000);
+
+
+    setTimeout(function(){
+        console.log('-------- disconnect -------- ');
+        rooms[messagetype.DISCONNECT]('robot');
+    }, 10000);
+
+}, 5000);
+</pre>
+The full working example is here: roomsjs-client/client/examples/collaborate.
+
 Rooms.db services examples:
+[https://github.com/eladelrom/roomsdb](https://github.com/eladelrom/roomsdb)
 
 <pre>
 services_example/
@@ -105,11 +162,13 @@ services_example/
   |  |  |- getitems.js [mySQL data source example]
   |  |  |- getnames.js [Static data example]
   |  |  |- insertchatmessage.js [Mongodb example]
+  |  |  |- addBlock.js [levelDB example]
 </pre>
 
 Front-end example of getting the number of visitors and data from external sources:
 
 Examples of front-end implementation of `rooms` includes connecting to `engine.io`, `socket.io` and `sockjs` see here:
+[https://github.com/eladelrom/roomsjs-client](https://github.com/eladelrom/roomsjs-client)
 
 <pre>
 client/
@@ -119,6 +178,8 @@ client/
   |  |  |- sockjs
   |  |  |- angular
   |  |  |- express
+  |  |  |- video
+  |  |  |- collaborate
 </pre>
 
 ## Docs:
@@ -134,4 +195,3 @@ See more information see here: [https://www.apress.com/us/book/9781484220436](ht
 ## LICENSE
 
 BSD license.
-
