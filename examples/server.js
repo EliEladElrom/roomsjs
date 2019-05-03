@@ -3,11 +3,16 @@
 var os = require('os'),
   rooms = require('roomsjs'),
   roomdb = require('rooms.db'),
+  bodyParser = require('body-parser'),
   port = (process.env.PORT || 8081);
 
 // create express server if needed
 var express = require('express'),
   app = express().use(express.static(__dirname + '/public'));
+
+// needed for parsing post
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // engine.io, socket.io
 var server = require('http').createServer(app).listen(port, function () {
