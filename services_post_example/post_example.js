@@ -14,13 +14,7 @@ function post_example(data, dbconnectorCallBackToRooms) {
     params = data.query || data.params;
 
     console.log('params: ' + JSON.stringify(params));
-
-    if (!params) {
-        dbconnectorCallBackToRooms(data, {status: 'error', error_message: 'error', params: {}});
-    } else {
-        dbconnectorCallBackToRooms(data, {status: 'success', params: params});
-    }
-
+    dbconnectorCallBackToRooms(data.result, {success: true, message: 'worked', params: params});
 }
 
 module.exports.post_example = post_example;
