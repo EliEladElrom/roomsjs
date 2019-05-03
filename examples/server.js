@@ -17,7 +17,8 @@ var server = require('http').createServer(app).listen(port, function () {
 // var server = require('http').createServer(app).listen(port, '0.0.0.0');
 
 // services
-roomdb.setServices('services_sample/');
+roomdb.setServices('services_example/', app, 'get');
+roomdb.setServices('services_post_example/', app, 'post');
 
 // connect to different database/s if needed
 // Mysql:

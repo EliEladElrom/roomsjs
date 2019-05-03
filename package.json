@@ -1,6 +1,6 @@
 {
   "name": "roomsjs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end",
   "main": "index.js",
   "scripts": {

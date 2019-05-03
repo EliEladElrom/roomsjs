@@ -15,7 +15,9 @@ var server = require('http').createServer(app).listen(port, function () {
 });
 
 // services
-roomdb.setServices('services_sample/');
+roomdb.setServices('services_example/', app, 'get');
+roomdb.setServices('services_post_example/', app, 'post');
+
 roomdb.connectToDatabase('mysql', 'localhost', {user: 'root', password: ''});
 
 // set rooms
