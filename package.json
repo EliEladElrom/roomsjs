@@ -14,7 +14,7 @@
     "socket.io": "0.8.7",
     "engine.io": "~0.6.3",
     "sockjs": "~0.3.7",
-    "level": "^4.0.0",
+    "level": "latest",
     "dat-swarm-defaults": "^1.0.1",
     "discovery-swarm": "^5.1.2",
     "crypto-js": "latest",
