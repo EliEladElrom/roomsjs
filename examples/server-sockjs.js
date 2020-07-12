@@ -26,7 +26,8 @@ rooms = new rooms({
   isdebug : true,
   transporter : {
     type: 'sockjs',
-    server : server
+    server : server,
+    p2pname: 'yourUniqueChannelName'
   },
   roomdb : null /* use 'roomdb' or 'null' if db not needed */
 });

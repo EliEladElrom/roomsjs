@@ -25,7 +25,8 @@ rooms = new rooms({
   isdebug : true,
   transporter : {
     type: 'engine.io',
-    server : server
+    server : server,
+    p2pname: 'yourUniqueChannelName'
   },
   roomdb : roomdb
 });

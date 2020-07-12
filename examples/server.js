@@ -36,7 +36,8 @@ rooms = new rooms({
   isdebug : true,
   transporter : {
     type: 'engine.io', /* options: engine.io|socket.io|sockjs */
-    server : server
+    server : server,
+    p2pname: 'yourUniqueChannelName'
   },
   roomdb : roomdb /* or null if db not needed */
 });
