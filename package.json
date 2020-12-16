@@ -11,7 +11,7 @@
     "url": "https://github.com/EladElrom/RoomsJS.git"
   },
   "dependencies": {
-    "socket.io": "0.8.7",
+    "socket.io": "2.3.0",
     "engine.io": "~0.6.3",
     "sockjs": "~0.3.7",
     "level": "latest",
