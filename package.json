@@ -1,7 +1,7 @@
 {
   "name": "roomsjs",
-  "version": "0.1.63",
-  "description": "JavaScript Node.JS module for creating rooms and streaming data between front-end and back-end",
+  "version": "0.1.64",
+  "description": "adding postgres database connector example",
   "main": "index.js",
   "scripts": {
     "test": "listenToRoomEvents"
